@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto');
+
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Roboto", sans-serif;
+}
+
+body{
+  background-color: #222222;
+}
+
+@media only screen and (max-width: 1000px) {
+  body{
+    margin: 20px;
+  }
+}

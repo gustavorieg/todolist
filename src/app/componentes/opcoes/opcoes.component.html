@@ -1,0 +1,9 @@
+<section class="opcoes">
+    <ul>
+      <li (click)="setarOpcao('todos')" [ngClass]="{'ativo': opcoes.opcaoEscolhida === 'todos'}">Ver todos</li>
+      <p>/</p>
+      <li (click)="setarOpcao('ativos')" [ngClass]="{'ativo': opcoes.opcaoEscolhida === 'ativos'}"  >Ativos</li>
+      <p>/</p>
+      <li (click)="setarOpcao('finalizados')" [ngClass]="{'ativo': opcoes.opcaoEscolhida === 'finalizados'}">Finalizados</li>
+    </ul>
+</section>

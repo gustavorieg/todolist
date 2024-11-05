@@ -1,0 +1,31 @@
+.opcoes {
+  max-width: 1000px;
+  display: flex;
+  margin: 10px auto;
+  flex-direction: row;
+}
+
+.opcoes ul,li {
+  color: #757575;
+  padding: 0px;
+  display: inline-block;
+  margin: 0px;
+  cursor: pointer;
+}
+
+.opcoes li:hover {
+  color: #fff;
+  transition: 0.5s;
+}
+
+.opcoes .ativo{
+  color: #fff;
+}
+
+.opcoes p {
+  display: inline-block;
+  padding: 0px 10px;
+}
+
+
+
