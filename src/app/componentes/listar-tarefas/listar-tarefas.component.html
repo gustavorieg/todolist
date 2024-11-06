@@ -1,1 +1,5 @@
-<p>listar-tarefas works!</p>
+<section class="lista-tarefas">
+  @for (tarefa of listaTarefas; track tarefa.id) {
+    <app-tarefa [tarefa]="tarefa" />
+  }
+</section>
