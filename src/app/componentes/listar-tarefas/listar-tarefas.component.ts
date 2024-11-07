@@ -1,27 +1,29 @@
 import { Component } from '@angular/core';
 import { Tarefa, TarefaComponent } from '../tarefa/tarefa.component';
+import { TarefaService } from '../tarefa.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'app-listar-tarefas',
   standalone: true,
   imports: [
-    TarefaComponent
+    TarefaComponent,
+    HttpClientModule
   ],
   templateUrl: './listar-tarefas.component.html',
-  styleUrl: './listar-tarefas.component.css'
+  styleUrl: './listar-tarefas.component.css',
+  providers: [
+    TarefaService
+  ]
 })
 export class ListarTarefasComponent {
-  listaTarefas: Tarefa[] =
-  [
-    {
-      id: 1,
-      descricao: 'Desenvolver site',
-      situacao: 'ativo'
-    },
-    {
-      id: 2,
-      descricao: 'Desenvolver sistema',
-      situacao: 'finalizado'
-    }
-  ]
+  listaTarefas: Tarefa[] = []
+
+  constructor(private service: TarefaService){}
+
+  ngOnInit(): void{
+    this.service.listar().subscribe((listaTarefas) => {
+      this.listaTarefas = listaTarefas
+    })
+  }
 }

@@ -1,0 +1,9 @@
+{
+  "terefas":[
+    {
+      "id": 1,
+      "descricao": "Desenvolver site",
+      "situacao": "ativo"
+    }
+  ]
+}
